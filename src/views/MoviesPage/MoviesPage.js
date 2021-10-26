@@ -33,6 +33,7 @@ const MoviesPage = () => {
   const onSubmit = query => {
     setQuery(query);
     setMovies([]);
+    history.push({ ...history.location, search: `search=${query}` });
   };
 
   return (
